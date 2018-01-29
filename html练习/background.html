@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>background</title>
+<style>
+#div1 {
+    border-top: 2px solid #227aa5;
+    border-left: 1px solid #cfcfcf;
+    border-right: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    background: url("../css/img/jb.png") no-repeat top center;
+    width: 298px;
+    height: 416px;
+}
+
+#div2 {
+    background: url("../css/img/icon_03.png") 16px 26px no-repeat #ffffff;
+    height: 57px;
+    /*display:flex;!*Flex布局*!
+    display: -webkit-flex; !* Safari *!
+    align-items:center;!*指定垂直居中*!*/
+}
+
+#div3 {
+    background: url("../css/img/icon_07.png") 9px 51px no-repeat #f7f7f7;
+    height: 126px;
+}
+
+#div4 {
+    background: url("../css/img/icon_10.png") 15px 26px no-repeat #ffffff;
+    height: 76px;
+}
+
+#div5 {
+    background: url("../css/img/icon_14.png") 12px 49px no-repeat #f7f7f7;
+    height: 127px;
+}
+
+#jb {
+    height: 29px;
+    border-bottom: 1px solid #cfcfcf;
+    font:14px "黑体";
+    line-height: 29px;
+    padding-left: 10px;
+}
+
+.font {
+    font-size:12px;
+    word-spacing: 4px;
+    margin-left:57px;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+#div4 .font span{
+    margin-left:10px;
+}
+#div4 .font span:nth-of-type(1){
+    margin-left:0px;
+}
+#box{
+    display:flex;
+}
+.inner {
+    width:100px;
+    height:100px;
+    background: gray;
+    margin:10px;
+}
+
+</style>
+</head>
+<body>
+<div id="div1">
+    <div id="jb">网易产品</div>
+    <div id="list">
+        <div id="div2">
+            <div class="font">
+                免费邮 VIP邮箱 企业邮箱 邮箱大师 易信
+            </div>
+        </div>
+        <div id="div3">
+            <div class="font">
+                <span>梦幻西游2</span>
+                <span>新大话2</span> <span>新大话3</span> <span>藏地传奇</span>
+                <br>
+                <span>魔兽世界</span> <span>星际争霸II</span> <span>倩女幽魂2</span> <span>武魂2</span>
+                <br>
+                <span>天下3</span> <span>突击英雄</span> <span>新飞飞</span> <span>大唐无双零</span> <span>天御</span>
+                <br>
+                <span>英雄三国</span> <span>天下3</span> <span>天大3</span> <span>天下3</span>
+            </div>
+
+        </div>
+        <div id="div4">
+            <div class="font">
+                <span>XXX</span><span>LOFTER</span><span>博客</span><span>相册</span><span>X</span><span>花田交友</span>
+                <span>博客</span><span>博客</span><span>博客</span><span>博客</span><span>XX博客</span><span>XXXX博客</span>
+            </div>
+
+        </div>
+        <div id="div5"></div>
+    </div>
+
+</div>
+<div id="box">
+    <div class="inner"></div>
+    <div class="inner"></div>
+    <div class="inner"></div>
+</div>
+</body>
+</html>

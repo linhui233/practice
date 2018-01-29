@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<!--
+    1、考虑标签语义化，使用合适的标签
+    2、标签特性的转换
+    3、小竖线使用哪种方式进行编码（图片、边框、背景颜色、字符...）
+    4、文字的行高设置
+    5、标签默认样式的处理(reset css)
+-->
+<link href="../html标签/重置.css"/>
+<style>
+#shop{
+    background-color:#f7f7f7;
+    width:288px;
+    height:707px;
+    margin:0 auto;
+}
+header{
+    width:288px;
+    height:38px;
+
+
+}
+header span{
+    vertical-align: top;
+    display:inline-block;
+    margin-left:9px;
+    margin-top:7px;
+    font:11px "黑体";
+    line-height:11px;
+    color:#7c7c7c;
+
+}
+header img{
+    margin-top:4px;
+    margin-left:14px;
+    display:inline-block;
+}
+#main{
+    width:258px;
+    height:603px;
+    background:#ffffff;
+    border:1px solid #e8e8e8;
+    margin:0 14px;
+}
+#main .top{
+    font:12px "黑体";
+    display:block;
+    margin-top:17px;
+    margin-left:14px;
+}
+
+#main .discript {
+    font:12px "宋体";
+    margin-left:14px;
+    margin-top:10px;
+}
+.discript span {
+    border-right:1px solid gray;
+    padding-right:7px;
+    margin-right:10px;
+}
+.discript span:last-child{
+    border-right:none;
+}
+#main img{
+    display:inline-block;
+    margin:0 5px;
+}
+
+#main .imgs{
+   text-align:center;
+    margin-top:12px;
+}
+footer{
+    width:258px;
+    height:35px;
+    border:1px solid #e9e9e9;
+    margin:0px auto;
+    text-align:center;
+    line-height:35px;
+    background-color:#e9e9e9;
+}
+
+</style>
+</head>
+<body>
+<div id="shop">
+    <header>
+        <img src="images/img_03.png"/><span>
+        你可能喜欢的店铺</span>
+    </header>
+    <div id="main">
+        <section>
+            <span class="top">素色空间</span>
+            <div class="discript">
+                <span>态度好</span><span>有色差</span><span>有赠品</span><span>送了赠品</span>
+            </div>
+            <div class="imgs">
+                <img src="images/img_07.png" alt=""><img src="images/img_09.png" alt=""><img src="images/img_11.png" alt="">
+            </div>
+        </section>
+        <section>
+            <div class="img">
+                <span class="top">遇见艺术家外贸生活馆</span>
+                <div class="discript">
+                    <span>态度好</span><span>有色差</span><span>有赠品</span><span>送了赠品</span>
+                </div>
+                <div class="imgs">
+                    <img src="images/img_16.png" alt=""><img src="images/img_17.png" alt=""><img src="images/img_18.png" alt="">
+                </div>
+            </div>
+        </section>
+        <section>
+
+                <span class="top">【大城小事】 娇兰代购中小</span>
+                <div class="discript">
+                    <span>态度好</span><span>有色差</span><span>有赠品</span><span>送了赠品</span>
+                </div>            <div class="imgs">
+                <img src="images/img_22.png" alt=""><img src="images/img_23.png" alt=""><img src="images/img_24.png" alt="">
+            </div>
+        </section>
+        <section>
+                <span class="top">哆哆秒HOUSE</span>
+                <div class="discript">
+                    <span>正品</span><span>很舒服</span><span>萌系</span><span>韩版</span>
+                </div>
+                <div class="imgs">
+                    <img src="images/img_28.png" alt="">
+                    <img src="images/img_29.png" alt="">
+                    <img src="images/img_30.png" alt="">
+                </div>
+
+        </section>
+
+    </div>
+    <footer>
+        <img src="images/img_35.png"/>
+        换一组看看
+    </footer>
+</div>
+</body>
+</html>

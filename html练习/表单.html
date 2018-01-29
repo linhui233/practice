@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>表单练习</title>
+<style>
+#all{
+    overflow:hidden;
+    background:#e8f6fe;
+    height:600px;
+}
+#box{
+    position:relative;
+    width:410px;
+    height:502px;
+    background:white;
+    margin:0 auto;
+}
+
+form{
+    border:1px solid white;
+    margin-top:43px;
+}
+input{
+    margin-left:10px;
+    text-indent:10px;
+}
+.usr{
+    margin-top:50px;
+    margin-bottom:10px;
+}
+.usr input,.pwd input{
+    padding:0px;
+    width:228px;
+    height:38px;
+    border:1px solid black;
+    margin-left:10px;
+}
+.usr input:focus{
+    outline-color:red;
+}
+.msg{
+    margin-bottom:10px;
+}
+.msg textarea {
+    vertical-align: middle;
+    border:1px solid black;
+    width:225px;
+    height:76px;
+    margin-left:10px;
+    margin-right:63px;
+    resize:none;
+    text-indent:10px;
+    font:14px "黑体";
+
+}
+
+#sexCheck{
+    display:inline-block;
+    position:absolute;
+    left:70px;
+}
+#sexCheck input{
+    display:none;
+}
+
+input[type="radio"] + label::before {
+    content: "\a0"; /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    width: 1em;
+    height: 1em;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 1px solid #e7788d;
+    line-height: 1;
+}
+
+input[type="radio"]:checked + label::before {
+    width: .8em;
+    height: .8em;
+    background-color: #e7788d;
+    background-clip: content-box;
+    padding: .1em;
+}
+.pink{
+    width:230px;
+    height:38px;
+    font-size:10px;
+    line-height:38px;
+    margin-left:115px;
+    background:#fdf1f3;
+    color:red;
+    text-align:center;
+    margin-bottom:10px;
+
+}
+
+.sex{
+    display:block;
+    height:30px;
+}
+.hobby{
+    margin-left:72px;
+}
+#sub{
+    width:179px;
+    height:44px;
+    border:none;
+    background:#e7788d;
+    margin:0 auto;
+}
+.sub{
+    margin-top:50px;
+    text-align:center;
+}
+input[type="checkbox"]{
+    display:none;
+}
+
+.hobby label{
+    display:inline-block;
+    text-align:center;
+    line-height:32px;
+    width:65px;
+    height:32px;
+    background-color: #f9f9f9;
+}
+.hobby input:checked + label{
+    background-color:yellowgreen;
+}
+.center{
+    text-align:right;
+}
+.center input{
+    margin-right:63px;
+}
+
+
+</style>
+</head>
+<body>
+<div id="all">
+    <div id="box">
+        <form>
+            <div class="center usr">
+                用户名:<input type="text">
+            </div>
+            <div class="center pwd">
+                密码:<input type="password">
+            </div>
+
+            <div class="pink">密码需要8-12位数字或字母组合</div>
+            <div class="center msg">
+                留言:<textarea></textarea>
+            </div>
+            <div class="sex">
+                <div id="sexCheck">
+                    性别:
+                    <input type="radio" name="sex" id="myCheck">
+                    <label for="myCheck">男</label>
+                    <input type="radio" name="sex" id="myCheck2">
+                    <label for="myCheck2">女</label>
+                </div>
+            </div>
+            <div class="hobby">
+                爱好:
+                <input type="checkbox" id="ball">
+                <label for="ball">打球</label>
+                <input type="checkbox" id="sing">
+                <label for="sing">唱歌</label>
+                <input type="checkbox" id="sleep">
+                <label for="sleep">睡觉</label>
+            </div>
+            <div class="sub">
+                <input type="submit" value="提交" id="sub">
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
