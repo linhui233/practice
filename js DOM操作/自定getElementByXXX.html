@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+
+<script>
+    // 遍历DOM,对字节点进行自定的func操作
+    var walk_the_DOM = function walk(node,func){
+        func(node);
+        node = node.firstChild;
+        while(node){
+            walk(node,func);
+            node = node.nextSibling;
+        }
+    }
+
+
+    var getElementsByAttribute = function (att,value){
+        var results = [];
+        walk_the_DOM(document.body,function (node){
+            var actual = node.nodeType === 1 && node.getAttribute(att);
+            if(typeof actual ==='string' &&
+                (actual === value || (typeof value !== 'string' && value==actual))){
+                results.push(node);
+            }
+        });
+        return results;
+    }
+    //获得页面上具有class='clx'的所有元素
+    var getElementsByClass= function(clx){
+        var result =[];
+        walk_the_DOM(document,function(node){
+            var actual = node.nodeType === 1 && node.getAttribute('class');
+            console.log(actual);
+            if(typeof actual ==='string' &&
+                (actual ===clx)){
+                result.push(node);
+            }
+        });
+        return result;
+    }
+
+
+
+    window.onload = function(){
+
+        console.log(getElementsByAttribute('display',1));
+        console.log(getElementsByClass('asdf'));
+
+    }
+</script>
+</head>
+<body>
+<div id="idv">
+    <div id="div2" class="new"></div>
+    <span style="display:inline-block" class="new">123</span>
+    <input type="password" name="s233" id="pwd" class="new">
+    <div display=1 id="asd" class="asdf">123</div>
+</div>
+
+</body>
+</html>
